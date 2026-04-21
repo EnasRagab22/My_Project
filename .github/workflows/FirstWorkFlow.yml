@@ -16,6 +16,6 @@ jobs:
            with:
                 python-version: "3.10"
          - name: CheckPythonVersion
-           run: pyhton --version
+           run: python --version
          - name: RunPython
            run: python app.py
