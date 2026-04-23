@@ -16,7 +16,14 @@ jobs:
          - name: run file
            run : ./run.sh fruits.txt
          - name: copy file
-           run: cp group.txt .. 
+           run: |
+                git config --global user.name "EnasRagab22"
+                git config --global user.email "enasragab226@gmail.com"
+                git add group.txt
+                git commit -m "Add group.txt"
+                git pull origin main
+                git push origin main
+           
          - name: SetupPython
            uses: actions/setup-python@v5
            with:
