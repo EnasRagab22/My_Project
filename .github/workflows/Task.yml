@@ -1,0 +1,17 @@
+name: HelloWorkFlow
+
+on: [push]
+jobs:
+   Hello:
+      runs-on: ubuntu-latest
+      steps:
+         - name: Checkout
+           uses: actions/checkout@v4
+         - name: ListDir
+           run: ls -alh
+         - name: make file 
+           run: nano fruits.txt
+         - name : make file for excute sorting
+           run : nano run.sh
+         - name: run file
+           run : ./run.sh fruits.txt

@@ -11,6 +11,12 @@ jobs:
            uses: actions/checkout@v4
          - name: ListDir
            run: ls -alh
+         - name: make file 
+           run: nano fruits.txt
+         - name : make file for excute sorting
+           run :  nano fruits.txt
+         - name: run file
+           run : ./run.sh fruits.txt
          - name: SetupPython
            uses: actions/setup-python@v5
            with:
@@ -19,3 +25,4 @@ jobs:
            run: python --version
          - name: RunPython
            run: python app.py
+        
