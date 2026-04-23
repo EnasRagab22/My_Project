@@ -1,5 +1,6 @@
 name: HelloWorkFlow
-
+permissions:
+     contents: write
 on: [push]
 jobs:
    Hello:
