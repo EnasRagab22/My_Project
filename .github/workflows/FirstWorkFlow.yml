@@ -18,8 +18,8 @@ jobs:
          - name : make file for excute sorting
            run : touch run.sh
          - name : add Excution command
-           run :  sort $1 | uniq -c | awk -F' ' '{print $2 " --> "$1}' > group.txt
-           run :  cat group.txt
+           run :  echo sort $1 | uniq -c | awk -F' ' '{print $2 " --> "$1}' > group.txt >run.sh
+           run :  echo cat group.txt > run.sh
          - name: run file
            run : ./run.sh fruits.txt
          - name: SetupPython
