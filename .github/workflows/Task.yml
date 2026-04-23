@@ -10,8 +10,13 @@ jobs:
          - name: ListDir
            run: ls -alh
          - name: make file 
-           run: nano fruits.txt
+           run: touch fruits.txt
+         - name : Add data
+           run : echo "orange","apple","banana","mango","apple","mango" > fruits.txt
          - name : make file for excute sorting
-           run : nano run.sh
+           run : touch run.sh
+         - name : add Excution command
+           run :  sort $1 | uniq -c | awk -F' ' '{print $2 " --> "$1}' > group.txt
+           run :  cat group.txt
          - name: run file
            run : ./run.sh fruits.txt
